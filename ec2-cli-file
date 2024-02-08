@@ -1,0 +1,9 @@
+aws ec2 run-instances \
+    --image-id ami-0740e3b0eb6b0d694 \
+    --count 1 \
+    --instance-type t2.micro \
+    --key-name webkey \
+    --security-group-ids sg-046ba63e2267c1f3d \
+    --subnet-id subnet-0cb9f5d7135c8076b \
+    --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=cli-instance}]' \
+    
